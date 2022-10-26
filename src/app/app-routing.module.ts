@@ -13,12 +13,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'meme', pathMatch: 'full' },
   { path: 'login', component: LoginComponent, canActivate: [UnauthGuard] },
   { path: 'signup', component: SignupComponent, canActivate: [UnauthGuard] },
-  { path: 'meme', component: GeneratorComponent, canActivate: [AuthGuard, RoleGuard], data: { 
-    roles: 'user'
-  } },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard, RoleGuard], data: {
-    roles: 'admin'
-  } },
+  { path: 'meme', component: GeneratorComponent, canActivate: [AuthGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'forbidden', component: ForbiddenComponent, canActivate: [AuthGuard] }
 ];
 

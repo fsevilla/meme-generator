@@ -12,6 +12,9 @@ import { GeneratorComponent } from './pages/generator/generator.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
     GeneratorComponent,
     ProfileComponent,
     LoginComponent,
-    ForbiddenComponent
+    ForbiddenComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

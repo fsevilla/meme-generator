@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { toJpeg } from 'html-to-image';
 
@@ -12,13 +12,19 @@ export class GeneratorComponent implements OnInit {
   title = 'meme-generator';
   file: any;
   filename: string = '';
-  upper: string = 'Hola <br> mundo';
-  lower: string = 'mundo';
-  color: string = '';
-  size: number = 16;
-  dataUrl: string = 'https://pbs.twimg.com/media/EKM5TznXsAAyos1.jpg';
+  upper: string = 'Upper text';
+  lower: string = 'Lower text';
+  color: string = '#ffffff';
+  size: number = 32;
+  dataUrl: string = '';
+
+  @ViewChild('imageElement') imageElement: any;
 
   ngOnInit() {}
+
+  chooseFile() {
+    this.imageElement.nativeElement.click();
+  }
   
   doOnChange(target: any) {
     const file = target.files[0];

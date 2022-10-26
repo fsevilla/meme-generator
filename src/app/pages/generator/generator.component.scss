@@ -1,13 +1,45 @@
 #controls {
     width: 600px;
 
-    > mat-form-field {
+    mat-form-field {
         width: 100%;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    input[type="color"] {
+        width: 80px;
+    }
+
+    .panel {
+
+        &::after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+
+        > div {
+            width: 60%;
+            float: left;
+
+            &:last-child {
+                width: 40%;
+                text-align: right;
+                // padding-top: 10px;
+
+                > div {
+                    margin-bottom: 12px;
+                }
+            }
+        }
     }
 }
 
 #meme {
-    width: 800px;
+    width: 600px;
     height: 450px;
     background-color: black;
     background-position: center;
@@ -18,18 +50,24 @@
     > div {
         color: white;
         text-align: center;
-        border: dashed 1px white;
+        border: none;
         position: absolute;
         left: 5px;
         right: 5px;
 
         &#upper {
-            top: 5px;
+            top: 10px;
         }
 
         &#lower {
-            bottom: 5px;
+            bottom: 10px;
         }
     }
 
+}
+
+.cta {
+    width: 600px;
+    margin-top: 12px;
+    text-align: right;
 }
