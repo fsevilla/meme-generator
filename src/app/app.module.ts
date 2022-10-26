@@ -9,13 +9,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NlToBrPipe } from './shared/pipes/nl-to-br.pipe';
 import { SignupComponent } from './pages/signup/signup.component';
 import { GeneratorComponent } from './pages/generator/generator.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NlToBrPipe,
     SignupComponent,
-    GeneratorComponent
+    GeneratorComponent,
+    ProfileComponent,
+    LoginComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,
