@@ -1,3 +1,10 @@
 <mat-toolbar color="primary">
-    MemeGenerator
+    <mat-icon>home</mat-icon>
+    <span>MemeGenerator</span>
+
+    <span class="spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+      <div [matBadge]="notificaciones" matBadgeOverlap="false" class="demo-section">Text with a badge</div>
+    </button>
 </mat-toolbar>

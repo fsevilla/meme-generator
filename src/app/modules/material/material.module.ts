@@ -8,6 +8,9 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
+
 
 
 @NgModule({
@@ -22,7 +25,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatSliderModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    MatBadgeModule
   ]
 })
 export class MaterialModule { }
