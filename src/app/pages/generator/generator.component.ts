@@ -24,6 +24,8 @@ export class GeneratorComponent implements OnInit {
   size: number = 32;
   dataUrl: string = '';
 
+  success: boolean = false;
+
   @ViewChild('imageElement') imageElement: any;
 
   constructor() {}
@@ -62,7 +64,10 @@ export class GeneratorComponent implements OnInit {
       anchor.download = this.filename;
       anchor.href = e;
       anchor.click();
-    })
+      this.success = true;
+    });
+
+
   }
 
   shareMeme() {
