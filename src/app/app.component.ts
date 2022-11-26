@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+
+import { SocialAuthService } from "@abacritt/angularx-social-login";
 
 
 @Component({
@@ -8,9 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private router: Router) {
-    localStorage.setItem('token', '123');
-    router.navigate(['/meme']);
+  
+  constructor(socialAuthService: SocialAuthService) {
+    socialAuthService.authState.subscribe((user: any) => {
+      console.log('Usuario', user);
+    })
+  }
+
+  googleLogin() {
+    // this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
   
 }
